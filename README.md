@@ -34,10 +34,10 @@ A curated vault of viral Claude Code plugins, agent skills, and workflow reposit
 
 - [UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) — Design intelligence skill with palettes, typography rules, and UX guidelines across frameworks.
 - [Taste Skill](https://github.com/Leonxlnx/taste-skill) — Gives coding agents art direction and layout systems so web builds don't look like generic AI templates.
-- [Awesome Design Skills](https://github.com/jdsadminllc/awesome-design-skills) — Curated collection of 67 design system skills covering visual styles, typography, layouts, components, and design guidelines for AI coding agents.
+- [Awesome Design Skills](https://github.com/jdsadminllc/awesome-design-skills) — Curated collection of design skills covering visual styles, typography, layouts, components, and design guidelines for AI coding agents.
 - [Archify](https://github.com/tt-a1i/archify) — Turns ideas, plans, or codebases into interactive HTML/SVG architecture diagrams.
 - [Impeccable](https://github.com/pbakaus/impeccable) — Design vocabulary and critique/audit skill to catch UI "AI slop" before shipping.
-- [img2threejs](https://github.com/img2threejs/img2threejs) — Reconstructs 3D objects from reference images using procedural Three.js code. Creates quality-gated, animation-ready 3D models.
+- [img2threejs](https://github.com/img2threejs/img2threejs) — Reconstructs 3D objects from reference images using procedural Three.js code.
 - [PPT Master](https://github.com/hugohe3/ppt-master) — Generates natively editable PowerPoint (`.pptx`) decks with charts, shapes, and speaker notes from documents.
 - [Diagram Design](https://github.com/cathrynlavery/diagram-design) — Generates 45+ types of editorial HTML + SVG diagrams.
 
@@ -53,3 +53,19 @@ A curated vault of viral Claude Code plugins, agent skills, and workflow reposit
 ## 6. Browser Automation & Testing
 
 - [Playwright CLI](https://github.com/microsoft/playwright-cli) — Browser automation CLI designed for AI coding agents. Supports browser navigation, interaction, screenshots, and automated UI testing.
+
+## 7. Frontend & UI Development
+
+- [Framer Motion (Motion)](https://github.com/motiondivision/motion) — Production-ready animation library for React, JavaScript, and Vue. Supports gestures, spring animations, scroll effects, and layout transitions.
+- [21st.dev Agent Skills](https://github.com/21st-dev/skill) — Helps AI coding agents discover, generate, and use React and shadcn/ui components, themes, and templates.
+
+## 8. Code Quality & Security
+
+- [Cloudflare Security Audit](https://github.com/cloudflare/security-audit-skill) — Security auditing skill that reviews codebases, identifies vulnerabilities, validates findings, and generates structured security reports.
+- [OWASP ASVS](https://github.com/OWASP/ASVS) — Application Security Verification Standard. Provides security requirements for designing, developing, and testing web applications and services.
+
+## 9. Testing & Quality Assurance
+
+- [axe-core](https://github.com/dequelabs/axe-core) — Automated accessibility testing engine that detects WCAG violations and accessibility issues in web applications.
+- [Lighthouse](https://github.com/GoogleChrome/lighthouse) — Automated website auditing tool for performance, accessibility, SEO, and web best practices.
+- [Storybook](https://github.com/storybookjs/storybook) — Develop, document, and test UI components independently in an isolated environment.
