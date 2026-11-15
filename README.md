@@ -34,8 +34,10 @@ A curated vault of viral Claude Code plugins, agent skills, and workflow reposit
 
 - [UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) — Design intelligence skill with palettes, typography rules, and UX guidelines across frameworks.
 - [Taste Skill](https://github.com/Leonxlnx/taste-skill) — Gives coding agents art direction and layout systems so web builds don't look like generic AI templates.
+- [Awesome Design Skills](https://github.com/jdsadminllc/awesome-design-skills) — Curated collection of 67 design system skills covering visual styles, typography, layouts, components, and design guidelines for AI coding agents.
 - [Archify](https://github.com/tt-a1i/archify) — Turns ideas, plans, or codebases into interactive HTML/SVG architecture diagrams.
 - [Impeccable](https://github.com/pbakaus/impeccable) — Design vocabulary and critique/audit skill to catch UI "AI slop" before shipping.
+- [img2threejs](https://github.com/img2threejs/img2threejs) — Reconstructs 3D objects from reference images using procedural Three.js code. Creates quality-gated, animation-ready 3D models.
 - [PPT Master](https://github.com/hugohe3/ppt-master) — Generates natively editable PowerPoint (`.pptx`) decks with charts, shapes, and speaker notes from documents.
 - [Diagram Design](https://github.com/cathrynlavery/diagram-design) — Generates 45+ types of editorial HTML + SVG diagrams.
 
@@ -47,3 +49,7 @@ A curated vault of viral Claude Code plugins, agent skills, and workflow reposit
 - [Humanizer](https://github.com/blader/humanizer) — Removes common AI writing patterns based on Wikipedia's "Signs of AI writing" guide.
 - [I Have ADHD](https://github.com/ayghri/i-have-adhd) — Formats agent responses to lead with the immediate next action, numbered steps, and zero fluff.
 - [Marketing Skills](https://github.com/coreyhaines31/marketingskills) — Collection of skills for CRO, copywriting, SEO, analytics, and growth engineering.
+
+## 6. Browser Automation & Testing
+
+- [Playwright CLI](https://github.com/microsoft/playwright-cli) — Browser automation CLI designed for AI coding agents. Supports browser navigation, interaction, screenshots, and automated UI testing.
