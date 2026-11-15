@@ -1,137 +1,22 @@
 
 # Claude Skill Vault
 
-A curated vault of Claude Code plugins, agent skills, MCP servers, CLI tools, development frameworks, and workflow repositories. Each entry includes its purpose and installation method.
+A curated vault of Claude Code plugins, agent skills, MCP servers, CLI tools, development frameworks, and workflow repositories. Each entry includes its purpose, type, and installation method where available.
 
-## Installation Guide
+## Index
 
-### 1. Agent Skills
-
-Use the Skills CLI for repositories that support the Agent Skills format.
-
-Install a skill for the current project:
-
-```bash
-npx skills add owner/repository
-```
-
-Install globally:
-
-```bash
-npx skills add owner/repository -g
-```
-
-Install for Claude Code:
-
-```bash
-npx skills add owner/repository -a claude-code
-```
-
-Install a specific skill:
-
-```bash
-npx skills add owner/repository --skill skill-name
-```
-
-Official project: https://github.com/vercel-labs/skills
-
-### 2. Claude Code Plugins
-
-Add a plugin marketplace:
-
-```text
-/plugin marketplace add owner/repository
-```
-
-Install a plugin:
-
-```text
-/plugin install plugin-name@marketplace-name
-```
-
-Some official marketplaces allow direct installation:
-
-```text
-/plugin install plugin-name
-```
-
-Manage installed plugins with:
-
-```text
-/plugin
-```
-
-### 3. MCP Servers
-
-Add a local MCP server:
-
-```bash
-claude mcp add server-name -- npx -y package-name
-```
-
-Add a remote HTTP MCP server:
-
-```bash
-claude mcp add --transport http server-name https://example.com/mcp
-```
-
-List configured servers:
-
-```bash
-claude mcp list
-```
-
-Inspect active MCP connections inside Claude Code:
-
-```text
-/mcp
-```
-
-Always use the server's official package name, transport, endpoint, and authentication instructions.
-
-### 4. CLI Tools
-
-Install CLI tools using their official package manager.
-
-npm:
-
-```bash
-npm install -g package-name
-```
-
-Python:
-
-```bash
-pip install package-name
-```
-
-uv:
-
-```bash
-uv tool install package-name
-```
-
-Some tools use a one-time installer instead. Follow the repository's own instructions.
-
-### 5. Frontend Libraries
-
-Install libraries inside the relevant project directory.
-
-```bash
-npm install package-name
-```
-
-Development dependencies:
-
-```bash
-npm install -D package-name
-```
-
-### Installation Labels
-
-- Verified command: Matched to the repository's published installation instructions.
-- Manual setup: Requires following the repository's setup guide.
-- No software installation: A reference, specification, or collection rather than an installable tool.
+1. [Coding & Senior Dev Workflows](#1-coding--senior-dev-workflows)
+2. [Research & Codebase Understanding](#2-research--codebase-understanding)
+3. [Large Projects, Memory & Token Management](#3-large-projects-memory--token-management)
+4. [Design & Visuals](#4-design--visuals)
+5. [Writing, Productivity & Video](#5-writing-productivity--video)
+6. [Frontend & UI Development](#6-frontend--ui-development)
+7. [Browser Automation & Testing](#7-browser-automation--testing)
+8. [Code Quality & Security](#8-code-quality--security)
+9. [Deployment & Preview](#9-deployment--preview)
+10. [Additional Resources](#additional-resources)
+11. [Official Documentation](#official-documentation)
+12. [Installation & Security Notes](#installation--security-notes)
 
 ---
 
@@ -142,7 +27,7 @@ npm install -D package-name
 Agentic skills framework and software development methodology with brainstorming, planning, TDD, debugging, and code review workflows.
 
 - Type: Claude Code plugin / agent skills
-- Verified installation:
+- Installation:
 
 ```text
 /plugin install superpowers@claude-plugins-official
@@ -160,7 +45,7 @@ Agentic skills framework and software development methodology with brainstorming
 Engineering and workflow skills from Matt Pocock's `.agents` setup.
 
 - Type: Claude Code plugin / agent skills
-- Verified installation:
+- Installation:
 
 ```text
 /plugin install mattpocock-skills
@@ -179,7 +64,7 @@ npx skills@latest add mattpocock/skills
 Agent harness optimization system with skills, memory, security, hooks, and research-first development workflows.
 
 - Type: Claude Code plugin / agent framework
-- Verified installation:
+- Installation:
 
 ```text
 /plugin marketplace add affaan-m/everything-claude-code
@@ -194,32 +79,29 @@ Agent harness optimization system with skills, memory, security, hooks, and rese
 Coding guidelines derived from Andrej Karpathy's observations on LLM coding pitfalls. Focuses on simplicity, planning, and avoiding unnecessary changes.
 
 - Type: Claude Code plugin / project instructions
-- Verified plugin installation:
+- Plugin installation:
 
 ```text
 /plugin marketplace add forrestchang/andrej-karpathy-skills
 /plugin install andrej-karpathy-skills@karpathy-skills
 ```
 
-- Alternative project-level installation:
-
-```bash
-curl -o CLAUDE.md https://raw.githubusercontent.com/forrestchang/andrej-karpathy-skills/main/CLAUDE.md
-```
+- Alternative project-level installation: Download the `CLAUDE.md` file and place it in your project root.
+- Global setup: Merge the rules into `~/.claude/CLAUDE.md`.
 
 ### [Ponytail](https://github.com/DietrichGebert/ponytail)
 
 Makes AI agents think like a practical senior developer. Focuses on YAGNI, standard-library-first development, and simpler implementations.
 
 - Type: Claude Code plugin / agent skills
-- Verified plugin installation:
+- Plugin installation:
 
 ```text
 /plugin marketplace add DietrichGebert/ponytail
 /plugin install ponytail@ponytail
 ```
 
-- Skills-only installation:
+- Skills CLI alternative:
 
 ```bash
 npx skills add DietrichGebert/ponytail
@@ -230,7 +112,7 @@ npx skills add DietrichGebert/ponytail
 Production-grade engineering skills, agents, and commands for AI coding tools.
 
 - Type: Agent skills / agents / commands
-- Installation: Use the repository's README to select the required skills and installation method.
+- Installation: Follow the repository README to select and install the required skills.
 - Additional collection: [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills)
 
 ### [Jeffallan Claude Skills](https://github.com/Jeffallan/claude-skills)
@@ -238,14 +120,14 @@ Production-grade engineering skills, agents, and commands for AI coding tools.
 Collection of specialized full-stack development skills covering frontend, backend, frameworks, testing, infrastructure, and security.
 
 - Type: Claude Code plugin / agent skills
-- Verified marketplace installation:
+- Marketplace installation:
 
 ```text
 /plugin marketplace add jeffallan/claude-skills
 /plugin install fullstack-dev-skills@fullstack-dev-skills
 ```
 
-- Skills-only installation:
+- Skills CLI alternative:
 
 ```bash
 npx skills add jeffallan/claude-skills
@@ -260,8 +142,8 @@ npx skills add jeffallan/claude-skills
 Turns a codebase or folder into a queryable knowledge graph.
 
 - Type: Codebase analysis / knowledge graph
-- Installation: No package name or installation command confirmed from the available published instructions.
-- Follow the repository README for the current installation procedure.
+- Installation: Follow the repository README for the current package and installation procedure.
+- No verified universal installation command included.
 
 ### [Agent Reach](https://github.com/Panniantong/Agent-Reach)
 
@@ -269,7 +151,7 @@ CLI and agent skill for searching and reading X, Reddit, YouTube, GitHub, and ot
 
 - Type: Python CLI / agent skill
 - Prerequisite: `uv`
-- Verified installation:
+- Installation:
 
 ```bash
 uv tool install https://github.com/Panniantong/Agent-Reach/releases/latest/download/agent-reach.zip
@@ -282,28 +164,26 @@ agent-reach setup
 agent-reach update
 ```
 
-- Important: Do not install the unrelated PyPI package named `agent-reach`. Use the official GitHub release URL.
-
 ### [Understand Anything](https://github.com/lum1104/Understand-Anything)
 
 Turns a codebase into an interactive, searchable knowledge graph.
 
 - Type: Codebase visualization / agent tool
-- Installation: Follow the repository's current README and setup instructions.
-- No verified generic package command included.
+- Installation: Follow the repository README and setup instructions.
+- No verified universal package command included.
 
 ### [Last 30 Days](https://github.com/mvanhorn/last30days-skill)
 
 Researches topics across Reddit, X, YouTube, Hacker News, and Polymarket and synthesizes recent findings.
 
 - Type: Claude Code plugin / research skill
-- Verified Claude Code installation:
+- Installation:
 
 ```text
 /plugin marketplace add mvanhorn/last30days-skill
 ```
 
-- Alternative skills installation:
+- Skills CLI alternative:
 
 ```bash
 npx skills add mvanhorn/last30days-skill -g
@@ -314,12 +194,14 @@ npx skills add mvanhorn/last30days-skill -g
 Open-source AI job search agent that scans job boards, scores roles against a CV, and tailors resumes.
 
 - Type: Standalone AI application
-- Installation: Clone the repository and follow its Python environment and dependency instructions.
+- Installation:
 
 ```bash
 git clone https://github.com/career-ops-hq/career-ops.git
 cd career-ops
 ```
+
+- Follow the repository instructions to create the Python environment and install dependencies.
 
 ### [REA](https://github.com/morluto/rea)
 
@@ -327,7 +209,7 @@ Reverse-engineering agent framework for inspecting native binaries, Electron app
 
 - Type: Node.js CLI / MCP integrations
 - Prerequisite: Supported Node.js version
-- Verified setup:
+- Installation:
 
 ```bash
 npx rea-agents@latest setup
@@ -354,8 +236,8 @@ Provides AI coding agents with up-to-date, version-specific documentation for fr
 
 - Type: MCP server
 - Installation: Follow the official Context7 MCP setup guide.
-- Official documentation: https://context7.com/docs
-- Use the current endpoint and authentication instructions from the official documentation.
+- Documentation: https://context7.com/docs
+- Configure the current endpoint and authentication requirements from the official documentation.
 
 ### [Skill Seekers](https://github.com/yusufkaraaslan/Skill_Seekers)
 
@@ -363,7 +245,7 @@ Converts documentation websites, GitHub repositories, and PDFs into structured A
 
 - Type: Python CLI / skill generator / optional MCP server
 - Prerequisite: Python 3.10+
-- Verified core installation:
+- Core installation:
 
 ```bash
 pip install skill-seekers
@@ -397,7 +279,7 @@ Garry Tan's opinionated development setup with defined roles such as CEO, design
 
 - Type: Claude Code skills / agent workflow
 - Prerequisites: Claude Code, Git, Bun, and Node.js on Windows
-- Verified installation:
+- Installation:
 
 ```bash
 git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/.claude/skills/gstack
@@ -419,7 +301,7 @@ Reduces unnecessary agent output through concise communication rules and workflo
 
 - Type: Agent installer / skills / optional CLI
 - Prerequisite: Node.js 18+ for the skill installer
-- Verified installation:
+- Installation:
 
 ```bash
 npx -y github:JuliusBrussee/caveman
@@ -431,7 +313,7 @@ npx -y github:JuliusBrussee/caveman
 irm https://raw.githubusercontent.com/JuliusBrussee/caveman/v4.1.0/install.ps1 | iex
 ```
 
-- Optional CLI package:
+- Optional CLI:
 
 ```bash
 npm install -g @caveman-ai/cli@latest
@@ -442,7 +324,7 @@ npm install -g @caveman-ai/cli@latest
 Persistent memory across sessions that compresses session history and injects relevant context into later sessions.
 
 - Type: Claude Code plugin / memory system
-- Verified installation:
+- Installation:
 
 ```bash
 npx claude-mem install
@@ -455,7 +337,7 @@ npx claude-mem install
 /plugin install claude-mem
 ```
 
-- Important: `npm install -g claude-mem` installs the SDK/library. It does not configure the plugin runtime and hooks.
+- Note: Installing the SDK or library alone does not configure the plugin runtime and hooks.
 
 ### [Headroom](https://github.com/headroomlabs-ai/headroom)
 
@@ -474,7 +356,7 @@ uv tool install --python 3.13 "headroom-ai[all]"
 pip install "headroom-ai[all]"
 ```
 
-- TypeScript:
+- TypeScript installation:
 
 ```bash
 npm install headroom-ai
@@ -491,7 +373,7 @@ headroom --version
 Context engineering, spec-driven development, and structured project execution system.
 
 - Type: Development workflow / agent framework
-- Verified installation:
+- Installation:
 
 ```bash
 npm install -g get-shit-done-cc@latest
@@ -508,14 +390,14 @@ npx get-shit-done-cc@latest
 Breakthrough Method for Agile AI-Driven Development. Provides structured planning and multi-agent execution workflows.
 
 - Type: Development methodology / agent framework
-- Verified stable installation:
+- Installation:
 
 ```bash
 npx bmad-method install
 ```
 
 - Prerequisites for the stable release: Node.js 20.12+, Python 3.10+, and uv.
-- Note: Check the repository documentation before installing preview or alpha releases.
+- Check the repository documentation before installing preview or alpha releases.
 
 ---
 
@@ -526,27 +408,27 @@ npx bmad-method install
 Design intelligence skill with design systems, palettes, typography rules, UX guidelines, and framework support.
 
 - Type: Claude Code plugin / design skill
-- Verified marketplace installation:
+- Installation:
 
 ```text
 /plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill
 /plugin install ui-ux-pro-max@ui-ux-pro-max-skill
 ```
 
-- Official setup guide: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/stack/docs/SETUP.md
+- Setup guide: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/stack/docs/SETUP.md
 
 ### [Taste Skill](https://github.com/Leonxlnx/taste-skill)
 
 Gives coding agents art direction and layout systems to avoid generic AI-generated interfaces.
 
 - Type: Design skill
-- Verified installation:
+- Installation:
 
 ```bash
 npx skills add https://github.com/Leonxlnx/taste-skill
 ```
 
-- Install a specific skill:
+- Specific skill installation:
 
 ```bash
 npx skills add https://github.com/Leonxlnx/taste-skill --skill design-taste-frontend
@@ -565,34 +447,30 @@ Official Claude Code frontend design plugin for distinctive interfaces, delibera
 
 - Type: Official Claude Code plugin
 - Installation: Use the official Claude Code plugin browser.
-- Plugin documentation: https://code.claude.com/docs/en/plugins
-- Do not treat the GitHub source folder as a standalone npm package.
+- Documentation: https://code.claude.com/docs/en/plugins
+- The GitHub source folder is not a standalone npm package.
 
 ### [Frontend Design Pro](https://github.com/claudekit/frontend-design-pro-demo)
 
 Collection of 11 frontend design aesthetics with master prompts, signature effects, and implementation examples.
 
 - Type: Claude Code plugin / design skill
-- Verified installation:
-
-```text
-/plugin marketplace add claudekit/frontend-design-pro-demo
-/plugin install frontend-design-pro
-```
+- Installation: Follow the repository's plugin and marketplace setup instructions.
+- No universal installation command included.
 
 ### [Bencium Design Skills](https://github.com/bencium/bencium-marketplace)
 
 Collection of UX design, visual design, typography, and design-audit skills for production interfaces.
 
 - Type: Claude Code marketplace / agent skills
-- Verified marketplace installation:
+- Marketplace installation:
 
 ```text
 /plugin marketplace add bencium/bencium-marketplace
-/plugin install bencium-controlled-ux-designer@bencium-marketplace
 ```
 
-- Install an individual skill using the Skills CLI:
+- Browse the marketplace and install the required plugin.
+- Skills CLI discovery:
 
 ```bash
 npx skills add bencium/bencium-marketplace --list
@@ -603,7 +481,7 @@ npx skills add bencium/bencium-marketplace --list
 Turns ideas, plans, or codebases into interactive HTML/SVG architecture diagrams.
 
 - Type: Agent skill / diagram generator
-- Verified installation:
+- Installation:
 
 ```bash
 npx skills add tt-a1i/archify -g
@@ -614,7 +492,7 @@ npx skills add tt-a1i/archify -g
 Design vocabulary and critique/audit skill to catch generic AI-generated interface patterns before shipping.
 
 - Type: Design skill / installer / hooks
-- Verified installation:
+- Installation:
 
 ```bash
 npx impeccable install
@@ -626,7 +504,7 @@ npx impeccable install
 npx impeccable update
 ```
 
-- Claude Code marketplace alternative:
+- Marketplace setup:
 
 ```text
 /plugin marketplace add pbakaus/impeccable
@@ -638,7 +516,7 @@ Reconstructs 3D objects from reference images using procedural Three.js code.
 
 - Type: Agent skill / 3D reconstruction tool
 - Prerequisites: Node.js 18+, Git, Python 3.10+
-- Verified installation:
+- Installation:
 
 ```bash
 npx --yes img2threejs@latest install
@@ -662,13 +540,13 @@ Generates editable PowerPoint decks with charts, shapes, and speaker notes from 
 npx skills add hugohe3/ppt-master
 ```
 
-- Install Python dependencies from the skill or repository directory:
+- Install Python dependencies from the repository directory:
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-- Official getting-started guide: https://github.com/hugohe3/ppt-master/blob/main/docs/getting-started.md
+- Getting started: https://github.com/hugohe3/ppt-master/blob/main/docs/getting-started.md
 
 ### [Diagram Design](https://github.com/cathrynlavery/diagram-design)
 
@@ -687,39 +565,35 @@ Generates 45+ types of editorial HTML and SVG diagrams.
 Anthropic's official reference collection and Agent Skills examples.
 
 - Type: Official agent skills / reference collection
-- Installation: Use the Skills CLI to select skills from the repository.
+- Installation:
 
 ```bash
 npx skills add anthropics/skills
 ```
 
-- Official Agent Skills specification: https://agentskills.io/
+- Agent Skills specification: https://agentskills.io/
 
 ### [Open Montage](https://github.com/OpenMontageInc/OpenMontage)
 
 Open-source agentic video production and montage pipeline.
 
 - Type: Video production framework / agent skills
-- Installation: Clone the repository and follow its environment, dependency, and setup instructions.
+- Installation:
 
 ```bash
 git clone https://github.com/OpenMontageInc/OpenMontage.git
 cd OpenMontage
 ```
 
+- Follow the repository instructions for environment setup and dependencies.
+
 ### [Hyperframes](https://github.com/heygen-com/hyperframes)
 
 Video rendering framework that lets agents write HTML and GSAP animations and render them to MP4.
 
 - Type: Video rendering framework / Claude Code plugin
-- Verified Claude Code installation:
-
-```bash
-claude plugin marketplace add heygen-com/hyperframes
-claude plugin install hyperframes@hyperframes
-```
-
-- Skills-only installation:
+- Installation: Follow the repository's current Claude Code plugin instructions.
+- Skills CLI alternative:
 
 ```bash
 npx skills add heygen-com/hyperframes
@@ -736,43 +610,33 @@ Removes common AI writing patterns based on Wikipedia's guide to signs of AI wri
 npx skills add blader/humanizer
 ```
 
-- Claude Code marketplace installation:
-
-```text
-/plugin marketplace add blader/humanizer
-/plugin install humanizer@humanizer
-```
+- Marketplace installation: Follow the repository's plugin setup instructions.
 
 ### [I Have ADHD](https://github.com/ayghri/i-have-adhd)
 
 Formats agent responses to lead with the immediate next action, numbered steps, and minimal unnecessary text.
 
 - Type: Agent skill
-- Verified general skills installation:
+- Installation:
 
 ```bash
 npx skills add ayghri/i-have-adhd
 ```
 
-- The repository documents different installation methods for supported agent platforms. Check its installation guide for the specific platform.
+- Check the repository's installation guide for platform-specific setup.
 
 ### [Marketing Skills](https://github.com/coreyhaines31/marketingskills)
 
 Collection of skills for CRO, copywriting, SEO, analytics, and growth engineering.
 
 - Type: Marketing skills / Claude Code plugin
-- Verified installation:
+- Skills CLI installation:
 
 ```bash
 npx skills add coreyhaines31/marketingskills
 ```
 
-- Claude Code marketplace alternative:
-
-```text
-/plugin marketplace add coreyhaines31/marketingskills
-/plugin install marketing-skills
-```
+- Check the repository README for plugin-specific installation and configuration.
 
 ---
 
@@ -784,7 +648,7 @@ Production-ready animation library for React, JavaScript, and Vue. Supports gest
 
 - Type: Frontend library
 - npm package: `motion`
-- Verified installation:
+- Installation:
 
 ```bash
 npm install motion
@@ -801,19 +665,19 @@ import { motion } from "motion/react";
 Helps AI coding agents discover, generate, install, and publish React and shadcn/ui components, themes, and templates.
 
 - Type: Agent skills / CLI integration
-- Verified skills installation:
+- Skills installation:
 
 ```bash
 npx skills add 21st-dev/skill
 ```
 
-- Optional CLI:
+- CLI authentication:
 
 ```bash
 npx @21st-dev/cli login
 ```
 
-- Install the skill pack globally:
+- Global skill installation:
 
 ```bash
 npx @21st-dev/cli skills install --global
@@ -824,20 +688,20 @@ npx @21st-dev/cli skills install --global
 Collection of specialized skills for GSAP, Three.js, React Spring, Framer Motion, Lottie, and interactive web animations.
 
 - Type: Claude Code plugin marketplace / animation skills
-- Verified marketplace installation:
+- Marketplace setup:
 
 ```text
 /plugin marketplace add freshtechbro/claudedesignskills
 ```
 
-- Browse the marketplace and install the required plugin, such as `threejs-webgl` or `core-3d-animation`.
+- Browse the marketplace and install the required animation plugin.
 
 ### [Design Motion Principles](https://github.com/kylezantos/design-motion-principles)
 
 Builds and audits purposeful animations using professional motion design principles, accessibility, and performance guidelines.
 
 - Type: Agent skill
-- Verified installation:
+- Installation:
 
 ```bash
 npx skills add kylezantos/design-motion-principles
@@ -848,7 +712,7 @@ npx skills add kylezantos/design-motion-principles
 Specialized skills for building interactive 3D websites, scenes, animations, and Three.js experiences.
 
 - Type: Three.js agent skills
-- Installation: Check the repository README for its current skill installation instructions.
+- Installation: Follow the repository README for the current skill installation procedure.
 - No verified package command included.
 
 ### [Figma MCP](https://developers.figma.com/docs/figma-mcp-server/)
@@ -865,13 +729,13 @@ Connects AI coding agents to Figma designs, components, variables, and design sp
 TypeScript and JavaScript language-server integration for code intelligence, diagnostics, go-to-definition, and reference lookup.
 
 - Type: Claude Code plugin / language server
-- Verified language-server installation:
+- Language server installation:
 
 ```bash
 npm install -g typescript-language-server typescript
 ```
 
-- Install the plugin through Claude Code's official plugin marketplace.
+- Install the Claude Code plugin through the official plugin marketplace.
 - Repository: https://github.com/anthropics/claude-plugins-official/tree/main/plugins/typescript-lsp
 
 ---
@@ -883,20 +747,20 @@ npm install -g typescript-language-server typescript
 Browser automation CLI designed for AI coding agents. Supports browser navigation, interaction, screenshots, and automated UI testing.
 
 - Type: Browser automation CLI
-- Verified installation:
+- Installation:
 
 ```bash
 npm install -g @playwright/cli@latest
 ```
 
-- Official documentation: https://playwright.dev/agent-cli/introduction
+- Documentation: https://playwright.dev/agent-cli/introduction
 
 ### [Playwright MCP](https://github.com/microsoft/playwright-mcp)
 
 MCP server that lets AI agents control browsers, inspect pages, interact with elements, and run browser automation.
 
 - Type: MCP server
-- Verified Claude Code installation:
+- Installation:
 
 ```bash
 claude mcp add playwright npx @playwright/mcp@latest
@@ -913,25 +777,26 @@ claude mcp add playwright npx @playwright/mcp@latest
 Gives AI coding agents access to Chrome DevTools for browser debugging, network inspection, performance analysis, screenshots, and automation.
 
 - Type: MCP server / Claude Code plugin
-- Verified MCP installation:
+- MCP installation:
 
 ```bash
 claude mcp add chrome-devtools --scope user npx chrome-devtools-mcp@latest
 ```
 
-- Plugin installation with MCP and skills:
+- Plugin installation:
 
 ```text
 /plugin marketplace add ChromeDevTools/chrome-devtools-mcp
-/plugin install chrome-devtools-mcp@chrome-devtools-plugins
 ```
+
+- Browse the marketplace and install the Chrome DevTools plugin.
 
 ### [Storybook](https://github.com/storybookjs/storybook)
 
 Develop, document, and test UI components independently in an isolated environment.
 
 - Type: Component development framework
-- Verified project installation:
+- Installation inside a frontend project:
 
 ```bash
 npx storybook@latest init
@@ -948,7 +813,7 @@ npm run storybook
 Connects AI agents to Storybook component information, documentation, setup workflows, and component development tools.
 
 - Type: MCP integration
-- Installation: Follow the repository's README for the current MCP server package and configuration.
+- Installation: Follow the repository README for the compatible Storybook version and MCP configuration.
 - No verified universal Claude Code command included.
 
 ### [axe-core](https://github.com/dequelabs/axe-core)
@@ -957,7 +822,7 @@ Automated accessibility testing engine that detects WCAG violations and accessib
 
 - Type: Accessibility testing library
 - npm package: `axe-core`
-- Verified installation:
+- Installation:
 
 ```bash
 npm install --save-dev axe-core
@@ -974,7 +839,7 @@ npm install --save-dev @axe-core/playwright
 Automated website auditing tool for performance, accessibility, SEO, and web best practices.
 
 - Type: CLI / website auditing tool
-- Verified installation:
+- Installation:
 
 ```bash
 npm install -g lighthouse
@@ -991,7 +856,7 @@ lighthouse https://example.com
 Collection of AI agent skills for website performance, Core Web Vitals, accessibility, SEO, and web quality audits.
 
 - Type: Web quality / agent skills
-- Installation: Follow the repository's current README and select the appropriate skill installation method.
+- Installation: Follow the repository README and select the appropriate skill installation method.
 - No verified universal install command included.
 
 ---
@@ -1013,8 +878,8 @@ Application Security Verification Standard. Provides security requirements for d
 - Type: Security standard / reference
 - No software installation required.
 - Stable release: ASVS 5.0.0
-- Official downloads: https://asvs.owasp.org/downloads/
-- Source:
+- Downloads: https://asvs.owasp.org/downloads/
+- Clone source:
 
 ```bash
 git clone https://github.com/OWASP/ASVS.git
@@ -1029,7 +894,7 @@ git clone https://github.com/OWASP/ASVS.git
 One-command deployment CLI for frontend and full-stack projects, with Claude Code skill support.
 
 - Type: Deployment CLI / agent skill
-- Installation: Follow the repository's current README for the official package name and setup procedure.
+- Installation: Follow the repository README for the official package name and setup procedure.
 - No verified package command included.
 
 ### [Vercel](https://github.com/vercel/vercel)
@@ -1038,7 +903,7 @@ Deployment platform and CLI for publishing frontend projects, managing preview d
 
 - Type: Deployment CLI / platform
 - npm package: `vercel`
-- Verified installation:
+- Installation:
 
 ```bash
 npm install -g vercel
@@ -1066,7 +931,7 @@ Large curated directory of Claude skills, plugins, MCP integrations, and workflo
 
 - Type: Reference collection
 - No standalone installer.
-- Browse the collection and install individual repositories using their own instructions.
+- Browse individual projects and install them using their respective instructions.
 
 ---
 
